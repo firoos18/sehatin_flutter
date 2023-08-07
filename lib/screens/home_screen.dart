@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sehatin_flutter/providers/meal_provider.dart';
 import 'package:sehatin_flutter/widgets/home_screen_meal_filter.dart';
+import 'package:sehatin_flutter/widgets/meal_item.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final searchTextController = TextEditingController();
+    final availableMeal = ref.watch(mealProvider);
 
     return Padding(
       padding: const EdgeInsets.only(right: 16, left: 16, top: 16),
@@ -48,7 +52,21 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
-          const MealFilter()
+          const MealFilter(),
+          const SizedBox(height: 16),
+          Expanded(
+            child: GridView.builder(
+              itemCount: availableMeal.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 32,
+                  mainAxisExtent: 243),
+              itemBuilder: (ctx, idx) => MealCardItem(
+                meal: availableMeal[idx],
+              ),
+            ),
+          ),
         ],
       ),
     );

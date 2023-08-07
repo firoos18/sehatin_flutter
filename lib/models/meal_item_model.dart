@@ -1,3 +1,7 @@
+import 'package:uuid/uuid.dart';
+
+const uuid = Uuid();
+
 class MealItem {
   String id;
   String name;
@@ -7,11 +11,10 @@ class MealItem {
   String imageUrl;
 
   MealItem({
-    required this.id,
     required this.name,
     required this.topping,
     required this.imageUrl,
     required this.price,
     required this.rating,
-  });
+  }) : id = uuid.v4();
 }

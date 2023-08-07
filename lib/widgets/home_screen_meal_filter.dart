@@ -15,7 +15,7 @@ class _MealFilterState extends State<MealFilter> {
       height: 37,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: mealFilter.length,
+        itemCount: mealFilterData.length,
         itemBuilder: (ctx, idx) => Padding(
           padding: const EdgeInsets.only(right: 10),
           child: InkWell(
@@ -32,9 +32,9 @@ class _MealFilterState extends State<MealFilter> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(mealFilter[idx].icon),
+                  Image.asset(mealFilterData[idx].icon),
                   const SizedBox(width: 4),
-                  Text(mealFilter[idx].name)
+                  Text(mealFilterData[idx].name)
                 ],
               ),
             ),
