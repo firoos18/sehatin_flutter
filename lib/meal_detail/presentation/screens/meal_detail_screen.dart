@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:sehatin_flutter/cart/data/cart_data.dart';
 import 'package:sehatin_flutter/cart/domain/entities/cart_data_model.dart';
+import 'package:sehatin_flutter/cart/presentation/bloc/cart_bloc.dart';
 import 'package:sehatin_flutter/cart/presentation/screens/cart_screen.dart';
 import 'package:sehatin_flutter/home/domain/entities/meal_data_model.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -205,12 +207,13 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                           foregroundColor: const Color(0xffF4F4F9),
                         ),
                         onPressed: () {
-                          cartData.add(
-                            CartDataModel(
-                              count: count,
-                              meal: widget.meal,
-                            ),
-                          );
+                          context.read<CartBloc>().add(
+                                InsertCartData(
+                                  cartItem: CartDataModel(
+                                      count: count, meal: widget.meal),
+                                ),
+                              );
+
                           Navigator.push(
                             context,
                             MaterialPageRoute(

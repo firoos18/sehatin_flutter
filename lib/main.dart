@@ -6,6 +6,7 @@ import 'package:sehatin_flutter/authentication/presentation/screens/landing_scre
 import 'package:sehatin_flutter/cart/presentation/bloc/cart_bloc.dart';
 import 'package:sehatin_flutter/core/di/injector.dart';
 import 'package:sehatin_flutter/home/presentation/bloc/home_bloc.dart';
+import 'package:sehatin_flutter/home/presentation/screens/home_screen.dart';
 import 'package:sehatin_flutter/meal_detail/presentation/bloc/meal_detail_bloc.dart';
 import 'package:sehatin_flutter/user_profile/presentation/bloc/user_profile_bloc.dart';
 
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
-        home: const LandingScreen(),
+        home: const HomeScreen(),
       ),
     );
   }
