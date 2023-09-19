@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:sehatin_flutter/cart/data/cart_data.dart';
 import 'package:sehatin_flutter/home/domain/entities/meal_data_model.dart';
 import 'package:transparent_image/transparent_image.dart';
 
@@ -112,7 +113,11 @@ class _CartCardItemState extends State<CartCardItem> {
                       ],
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        cartData.removeWhere(
+                          (element) => element.meal == widget.meal,
+                        );
+                      },
                       icon: const Icon(
                         FeatherIcons.trash,
                         size: 16,
