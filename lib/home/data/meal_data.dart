@@ -4,6 +4,7 @@ final mealItemData = [
   MealItem(
     name: "Grilled Tuna",
     topping: "with Vegetable Salad",
+    foodType: FoodType.meal,
     imageUrl:
         "https://ipfs.filebase.io/ipfs/QmaqEc8Up8Eia58qDydnxkYwcpvKHhJDZsHsJHjHqvtkVZ",
     price: "42000",
@@ -14,6 +15,7 @@ final mealItemData = [
   MealItem(
     name: "Grilled Tuna",
     topping: "with Rice and Green Beans",
+    foodType: FoodType.meal,
     imageUrl:
         "https://ipfs.filebase.io/ipfs/QmXymvRmf8DCtjVLQni8RvGLQ3xPZ4aDmdTALxhfk11PYf",
     price: "48000",
@@ -24,6 +26,7 @@ final mealItemData = [
   MealItem(
     name: "Toasted Bread",
     topping: "with Sunny Side Up",
+    foodType: FoodType.meal,
     imageUrl:
         "https://ipfs.filebase.io/ipfs/QmVAszBKSQn8w5gNDPzwTNwQZMPHhPKiPZrQ2gZAiw1tgD",
     price: "24000",
@@ -34,6 +37,7 @@ final mealItemData = [
   MealItem(
     name: "Vegetable Salad",
     topping: "with Boiled Egg & Grilled Duck",
+    foodType: FoodType.meal,
     imageUrl:
         "https://ipfs.filebase.io/ipfs/QmZDX1wKLgEWLERpcXs17iWN785MCB1n5gAyaonrVfxX69",
     price: "32000",
@@ -44,6 +48,7 @@ final mealItemData = [
   MealItem(
     name: "Vegetable Salad",
     topping: "with Shrimp & Tartar Sauce",
+    foodType: FoodType.meal,
     imageUrl:
         "https://ipfs.filebase.io/ipfs/Qmd5zM9DoBjcepHkBLRsbTANWjEhAKobLm74phDTTYWwtd",
     price: "35000",
@@ -54,6 +59,7 @@ final mealItemData = [
   MealItem(
     name: "Garlic Chicken",
     topping: "with Crispy Kailan",
+    foodType: FoodType.meal,
     imageUrl:
         "https://ipfs.filebase.io/ipfs/QmXMDPHCaVDoF5fER4p38sCYQr6bvTtw9tyBq87Meyrhu8",
     price: "28000",
